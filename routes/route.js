@@ -6,4 +6,6 @@ module.exports = route;
 
 route.get("/pessoas", controllerPessoa.getPessoas);
 
-route.post("/pessoa", controllerPessoa.postPessoa);
+route.post("/cadastrarPessoa", controllerPessoa.postCadastrarPessoa);
+
+route.put("/editarPessoa", controllerPessoa.putEditarPessoa);
