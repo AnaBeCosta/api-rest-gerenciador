@@ -32,7 +32,6 @@ module.exports = {
     
       try {
         await Pessoa.deleteOne({ cpf: cpf });
-    
         res.status(200).json({ message: 'Pessoa excluída com sucesso' });
       } catch (error) {
         console.error(error);
