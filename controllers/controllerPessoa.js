@@ -17,7 +17,12 @@ module.exports = {
     async putEditarPessoa(req, res) {
         const { nome, cpf, email, idade, admin, responsavel, candidato, senha } = req.body;
         const update = { nome, cpf, email, idade, admin, responsavel, candidato, senha};
-        let pessoa = await Pessoa.findOne({cpf});
-        await Pessoa.updateOne(pessoa, update);
+       
+        try {
+          await Pessoa.updateOne({ cpf: cpf }, update);
+          res.status(200).json({ message: 'Pessoa atualizada com sucesso!' });
+        } catch (error) {
+          res.status(500).json({ error: 'Erro ao atualizar pessoa.' });
+        }
     }
 }

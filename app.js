@@ -9,3 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 connectToDatabase();
+
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
