@@ -21,6 +21,6 @@ route.post("/cadastrarProjeto", controllerProjeto.postCadastrarProjeto);
 
 route.put("/editarProjeto", controllerProjeto.putEditarProjeto);
 
-route.delete("/projeto/:cpf", controllerProjeto.deleteProjeto);
+route.delete("/projeto/:nome", controllerProjeto.deleteProjeto);
 
 route.get("/projetos", controllerProjeto.getProjetos);
