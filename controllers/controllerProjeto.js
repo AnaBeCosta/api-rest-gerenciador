@@ -13,8 +13,8 @@ module.exports = {
   },
 
   async putEditarProjeto(req, res) {
-      const { nome, descricao, anoInicio, anoTermino } = req.body;
-      const update = { nome, descricao, anoInicio, anoTermino};
+      const { nome, descricao, anoInicio, anoTermino, responsavel  } = req.body;
+      const update = { nome, descricao, anoInicio, anoTermino, responsavel };
         
       try {
         await Projeto.updateOne({ nome: nome }, update);

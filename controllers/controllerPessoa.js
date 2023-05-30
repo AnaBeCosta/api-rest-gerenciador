@@ -8,16 +8,16 @@ module.exports = {
   },
 
   async postCadastrarPessoa(req, res) {
-      const { nome, cpf, email, idade, admin, responsavel, candidato, senha } = req.body;
-      const pessoa = new Pessoa({ nome, cpf, email, idade, admin, responsavel, candidato, senha});
+      const { nome, cpf, email, idade, senha, admin } = req.body;
+      const pessoa = new Pessoa({ nome, cpf, email, idade, senha, admin});
       await pessoa.save().then((pessoa) => {
           return res.json({"data": {"status": "success", pessoa}})
       })
   },
 
   async putEditarPessoa(req, res) {
-    const { nome, cpf, email, idade, admin, responsavel, candidato, senha } = req.body;
-    const update = { nome, cpf, email, idade, admin, responsavel, candidato, senha};
+    const { nome, cpf, email, idade, senha, admin } = req.body;
+    const update = { nome, cpf, email, idade, senha, admin};
       
     try {
       await Pessoa.updateOne({ cpf: cpf }, update);
