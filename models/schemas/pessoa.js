@@ -18,14 +18,14 @@ const PessoaSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  senha: {
+    type: String,
+    required: true,
+  },
   admin: {
     type: Boolean,
     required: true,
     default: false,
-  },
-  senha: {
-    type: String,
-    required: true,
   },
 });
 

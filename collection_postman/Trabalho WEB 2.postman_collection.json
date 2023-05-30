@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "29cdfce3-2495-4321-b0c6-732779f0f6ee",
+		"name": "Trabalho WEB 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Projetos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/projetos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projetos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Projeto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/projetos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"projetos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Julia\",\r\n    \"cpf\": \"123456789\",\r\n    \"email\": \"julia@email.com\",\r\n    \"idade\": 19,\r\n    \"senha\": \"abc123\",\r\n    \"admin\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cadastrarPessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cadastrarPessoa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

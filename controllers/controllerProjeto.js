@@ -2,11 +2,12 @@ const Projeto =  require("../models/projeto");
 module.exports = {
   async postCadastrarProjeto(req, res) {
       try{
-          const { nome, descricao, anoInicio, anoTermino } = req.body;
-          const projeto = new Projeto({ nome, descricao, anoInicio, anoTermino });
+          const { nome, descricao, anoInicio, anoTermino, responsavel } = req.body;
+          const projeto = new Projeto({ nome, descricao, anoInicio, anoTermino, responsavel });
           await projeto.save();
           return res.json({"data": {"status": "success", projeto}})
       } catch (error) {
+        console.log(error);
           return res.status(500).json({ error: 'Erro ao cadastrar projeto.' });
       }
   },
