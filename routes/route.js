@@ -25,5 +25,5 @@ route.delete("/projeto/:nome", controllerProjeto.deleteProjeto);
 
 route.get("/projetos", controllerProjeto.getProjetos);
 
-route.get("/interessados", controllerPessoa.getCandidatosInteressados);
+route.get("/interessados", controllerProjeto.getCandidatosInteressados);
 
