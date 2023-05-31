@@ -24,3 +24,6 @@ route.put("/editarProjeto", controllerProjeto.putEditarProjeto);
 route.delete("/projeto/:nome", controllerProjeto.deleteProjeto);
 
 route.get("/projetos", controllerProjeto.getProjetos);
+
+route.get("/interessados", controllerPessoa.getCandidatosInteressados);
+

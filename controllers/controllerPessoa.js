@@ -1,4 +1,6 @@
 const Pessoa =  require("../models/pessoa");
+const Projeto =  require("../models/projeto");
+
 module.exports = {
   
   //PESSOAS
@@ -48,6 +50,5 @@ module.exports = {
       res.status(500).json({ error: 'Erro ao listar candidatos.' });
     }
   }
-
 
 }

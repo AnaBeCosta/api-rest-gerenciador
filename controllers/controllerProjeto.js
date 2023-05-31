@@ -43,7 +43,18 @@ module.exports = {
       } catch (error) {
         res.status(500).json({ error: 'Erro ao listar projetos.' });
       }
-  }
+  },
 
-    //FALTANDO O get candidatosInteressados
+  //INTERESSADOS
+  async getCandidatosInteressados(req, res) {
+    const { nomeProjeto } = req.body;
+
+    try {
+      const projeto = await Projeto.findOne({ nome: nomeProjeto });
+      const candidatos = projeto.candidatos.map((candidato) => candidato.candidato);
+      return res.json({ data: { status: "success", candidatos } });
+    } catch (error) {
+      res.status(500).json({ error: 'Erro ao listar candidatos.' });
+    }
+  }
 }
