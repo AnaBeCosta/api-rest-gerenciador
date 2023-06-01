@@ -1,4 +1,5 @@
 const Projeto =  require("../models/projeto");
+const Pessoa = require("../models/pessoa");
 module.exports = {
   async postCadastrarProjeto(req, res) {
       try{
@@ -56,5 +57,39 @@ module.exports = {
     } catch (error) {
       res.status(500).json({ error: 'Erro ao listar candidatos.' });
     }
-  }
+  },
+
+  // Selecionados
+  async getCandidatosSelecionados(req, res) {
+    const {nome} = req.params;
+    const projeto = await Projeto.findOne({nome: nome});
+    if(projeto == null) {
+      res.status(404).json({error: 'Projeto não encontrado'});
+    }
+    const selecionados = projeto.selecionados.map((selecionado) => selecionado.selecionado);
+    res.status(200).json({data: { status: "success", selecionados} });
+    },
+    // Cadastrar
+    async putSelecionarCandidato(req, res) {
+      const {cpfResponsavel, cpfCandidato} = req.body;
+      
+      const projeto = await Projeto.findOne({"responsavel.cpf": cpfResponsavel, });
+      const candidato = await Pessoa.findOne({cpf: cpfCandidato});
+
+      projeto.selecionados.push(candidato);
+      await projeto.save();
+      console.log(candidato);
+      res.status(200).json({data: {status: "success", projeto}});
+      
+    },
+    async putCandidatar(req, res) {
+      const {nomeProjeto, cpfCandidato} = req.body;
+      
+      const projeto = await Projeto.findOne({nome: nomeProjeto});
+      const candidato = await Pessoa.findOne({cpf: cpfCandidato});
+      projeto.candidatos.push(candidato);
+      await projeto.save();
+      res.status(200).json({data: {status: "success", projeto}});
+      
+    }
 }

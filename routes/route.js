@@ -27,3 +27,8 @@ route.get("/projetos", controllerProjeto.getProjetos);
 
 route.get("/interessados", controllerProjeto.getCandidatosInteressados);
 
+route.get("/selecionados/:nome", controllerProjeto.getCandidatosSelecionados);
+
+route.put('/selecionarCandidato', controllerProjeto.putSelecionarCandidato);
+route.put('/candidatar', controllerProjeto.putCandidatar);
+
