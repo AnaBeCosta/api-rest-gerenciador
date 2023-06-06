@@ -1,5 +1,6 @@
 const Projeto =  require("../models/projeto");
 const Pessoa = require("../models/pessoa");
+
 module.exports = {
   async postCadastrarProjeto(req, res) {
       try{
@@ -9,7 +10,7 @@ module.exports = {
           return res.json({"data": {"status": "success", projeto}})
       } catch (error) {
         console.log(error);
-          return res.status(500).json({ error: 'Erro ao cadastrar projeto.' });
+        return res.status(500).json({ error: 'Erro ao cadastrar projeto.' });
       }
   },
 
@@ -73,7 +74,7 @@ module.exports = {
     async putSelecionarCandidato(req, res) {
       const {cpfResponsavel, cpfCandidato} = req.body;
       
-      const projeto = await Projeto.findOne({"responsavel.cpf": cpfResponsavel, });
+      const projeto = await Projeto.findOne({"responsavel.cpf": cpfResponsavel});
       const candidato = await Pessoa.findOne({cpf: cpfCandidato});
 
       projeto.selecionados.push(candidato);
