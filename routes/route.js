@@ -16,8 +16,6 @@ route.put("/editarPessoa", controllerPessoa.putEditarPessoa);
 
 route.delete('/pessoa/:_id', controllerPessoa.deletePessoa);
 
-route.get("/pessoas", controllerPessoa.getPessoas);
-
 route.get("/candidatos", controllerPessoa.getCandidatos);
 
 //RESPONSAVEL
