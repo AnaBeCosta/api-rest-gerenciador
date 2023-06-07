@@ -1,0 +1,473 @@
+_type: export
+__export_format: 4
+__export_date: 2023-06-07T02:17:37.534Z
+__export_source: insomnia.desktop.app:v2023.2.2
+resources:
+  - _id: req_12aade054ed6444698cb123236deb1aa
+    parentId: fld_2cd0555f338f4c32bc6e00ad9cf8bf80
+    modified: 1686099454292
+    created: 1686009466253
+    url: http://localhost:3000/login
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"user": "123456710",
+        	"senha": "123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1686009466253
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_2cd0555f338f4c32bc6e00ad9cf8bf80
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1686009464908
+    created: 1686009464908
+    name: JWT
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1686009464908
+    _type: request_group
+  - _id: wrk_469e5af8d9f24963be08a2d7c482b814
+    parentId: null
+    modified: 1685210312525
+    created: 1685210312525
+    name: CCH2
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_28dea84e944a4037a45d260b93bcdda6
+    parentId: fld_f2cabe99fc6b427f846df09a5b8da090
+    modified: 1686099484272
+    created: 1685303440915
+    url: http://localhost:3000/selecionarCandidato
+    name: Selecionar Candidato Interessado
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"candidato": "87654321"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_9f3351e7da5448f8a770ceb09c440364
+      - id: pair_4ceb5652f8664f22829744444a280ec9
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3MTAiLCJpYXQiOjE2ODYwOTk0NTUsImV4cCI6MTY4NjEwMDA1NX0.kFXXblaVcOUX13f4oxLFra_iwon4hvMeU6orY3ajfDw
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832673688
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f2cabe99fc6b427f846df09a5b8da090
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1685832697163
+    created: 1685832697163
+    name: Interessados | Selecionados
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685832697163
+    _type: request_group
+  - _id: req_2078e0e88eb34284a3a0e607d29f2438
+    parentId: fld_f2cabe99fc6b427f846df09a5b8da090
+    modified: 1686099425103
+    created: 1685305376921
+    url: http://localhost:3000/candidatar
+    name: Candidatar
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"_id": "647fb52ee1ad723de84e5392"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7ca44777a9b3442081af8b245fa3c409
+      - id: pair_8f147f12af4e49008ed66827ddfafc8c
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4NzY1NDMyMSIsImlhdCI6MTY4NjA5OTI3MCwiZXhwIjoxNjg2MDk5ODcwfQ.X4LYYQGPiwKzsz-rvC9Ul0lgEHArwl2kd0SSvsVq4cI
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832673663
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2d9ca88366bc4497aa2ca3a590f71692
+    parentId: fld_f2cabe99fc6b427f846df09a5b8da090
+    modified: 1686097237169
+    created: 1685491133713
+    url: http://localhost:3000/cadidatosInteressados
+    name: Listar  Candidatos Interessados
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e1b193b7c870400ba3e5604b20a0d781
+      - id: pair_edd496f7b6ff41ce9c284907e8d87a44
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3MTMiLCJpYXQiOjE2ODYwOTcyMjUsImV4cCI6MTY4NjA5NzgyNX0.pkUKNcg_3yAvarpHRqgYWUYM6DJSIwgLReXnpEhRKuU
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832673638
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fee72c2499d14f248f5ff63330d9d3f5
+    parentId: fld_f2cabe99fc6b427f846df09a5b8da090
+    modified: 1686097765641
+    created: 1686097741680
+    url: ""
+    name: Listar Selecionados
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685832673513
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d05d33515c5442608b228f953a184a41
+    parentId: fld_a785651558184da3b5ea20099b1527db
+    modified: 1686093485652
+    created: 1685296399268
+    url: http://localhost:3000/cadastrarProjeto
+    name: Cadastrar Projeto
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        "nome": "Projeto 5",
+        "descricao": "Projeto teste inicial",
+        "anoInicio": 2022, 
+        "anoTermino": 2023,
+        "responsavel": "123456713",
+        "candidatos" : ["123456711"]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_01a27a8ee6164fdd93d045a7e2ceaa07
+      - id: pair_23465c0ed92f41acb7a92f212fc6d37c
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3MTMiLCJpYXQiOjE2ODYwOTM0NDMsImV4cCI6MTY4NjA5NDA0M30.LuACg3z21pYoqzwqHtGOq2aNVn4LwpZSlMwSxw0T5o8
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832556000.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a785651558184da3b5ea20099b1527db
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1685832634235
+    created: 1685832603263
+    name: Projeto
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685832603263
+    _type: request_group
+  - _id: req_a8ab3a1c30e64898b63bdb744c7719b7
+    parentId: fld_a785651558184da3b5ea20099b1527db
+    modified: 1686093595990
+    created: 1685296724826
+    url: http://localhost:3000/editarProjeto
+    name: Editar Projeto
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"_id": "647fbe94717a0f220f32ff4f",
+        	"candidatos": ["123456711"]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4701728de84e47a091fcc196be78856f
+      - id: pair_5729b474e7904c708844324ec3e4a527
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3MTMiLCJpYXQiOjE2ODYwOTM0NDMsImV4cCI6MTY4NjA5NDA0M30.LuACg3z21pYoqzwqHtGOq2aNVn4LwpZSlMwSxw0T5o8
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832555950.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_435d6770eb144ada8f1ca033b3f926b0
+    parentId: fld_a785651558184da3b5ea20099b1527db
+    modified: 1686089423859
+    created: 1685296787933
+    url: http://localhost:3000/projeto/647faec76ee8331c12e25bde
+    name: Deletar Projetos
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_81bad57a428748128ff5211d38900165
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OTQyNDg0NDgwOCIsImlhdCI6MTY4NjA4OTM2NSwiZXhwIjoxNjg2MDg5OTY1fQ.0R9uJ7GBa8R1DHCSv-Wl_mH_PIZ7QGPFZEtNf4UTNK0
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832555900.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_676971da9ace41579be0dd6ec8fc4c1d
+    parentId: fld_a785651558184da3b5ea20099b1527db
+    modified: 1685832662903
+    created: 1685297293913
+    url: http://localhost:3000/projetos
+    name: Listar Projeto
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685832555850.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ed3e837f31bd4b9f96bbd686197f0683
+    parentId: fld_13c450e7fe224becbfda50ad300605b6
+    modified: 1686099258148
+    created: 1686063643516
+    url: http://localhost:3000/cadastrarPessoa
+    name: Cadastrar Pessoa
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Joana",
+          "cpf": "87654321",
+          "email": "rafael@example.com",
+          "idade": 24,
+          "senha": "123",
+          "admin": true
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_993ccc99cac844e98fbe4db627a22e20
+      - id: pair_c4465850d24447c5b9ea52ebd5fea259
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OTQyNDg0NDgwOCIsImlhdCI6MTY4NjA5OTIzMCwiZXhwIjoxNjg2MDk5ODMwfQ.HuSa3-EQOCS_i2GzeVV7N6yFXbgaBFJNFNmMlfTLUHo
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832561328
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_13c450e7fe224becbfda50ad300605b6
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1685832508738
+    created: 1685832508738
+    name: Pessoa
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685832508738
+    _type: request_group
+  - _id: req_8347bb3950064828bc18dcce912ab2f4
+    parentId: fld_13c450e7fe224becbfda50ad300605b6
+    modified: 1686086313805
+    created: 1685229029746
+    url: http://localhost:3000/editarPessoa
+    name: Editar Pessoa
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        "cpf": "49424844808",
+        "nome": "Ana Beatriz F"
+        }
+    parameters: []
+    headers:
+      - name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OTQyNDg0NDgwOCIsImlhdCI6MTY4NjA4NjI3OCwiZXhwIjoxNjg2MDg2ODc4fQ.XgxEMqtZwj36VIMNfwXS5iIgfloU-3iYL5_utusAsQY
+        id: pair_7a889d5f500f44c9b48b265c0b5d6b8b
+      - id: pair_a48c5a91c62a4f4bb995218204a6c14e
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832561303
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ad1a0882ba8c414296eedf8c9febbaf5
+    parentId: fld_13c450e7fe224becbfda50ad300605b6
+    modified: 1686023999880
+    created: 1685294627609
+    url: http://localhost:3000/pessoa/647ea93f1e2b63bc5211fa54
+    name: Deletar Pessoa
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_728c15bda0a14bc28b9f9419233e7f98
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OTQyNDg0NDgwOCIsImlhdCI6MTY4NjAyMzkwMCwiZXhwIjoxNjg2MDI0NTAwfQ.dNsS__DNpdWWa50CR0lkvRyAgHQqayXxf2iuWRAB-Ks
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832561253
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6385545b99f74a22b5234a5b5925595a
+    parentId: fld_13c450e7fe224becbfda50ad300605b6
+    modified: 1686091426873
+    created: 1685210322436
+    url: http://localhost:3000/candidatos
+    name: Listar Candidatos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_839a5b1277034757a7c4193095e1f2e4
+        name: x-access-token
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OTQyNDg0NDgwOCIsImlhdCI6MTY4NjA5MTQxNiwiZXhwIjoxNjg2MDkyMDE2fQ.9VRg2lY-jxhnrhfvrP33FZ4SCWWbLbHlGgOyxZ2r6aM
+        description: ""
+      - id: pair_e5a92cc2949042d58a597e7e2c617b9c
+        name: Content-Type
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1685832561203
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_fd630eeb2c1ca2e93ba0795b5347a769346df03e
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1685210312534
+    created: 1685210312534
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1685210312534
+    _type: environment
+  - _id: jar_fd630eeb2c1ca2e93ba0795b5347a769346df03e
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1685210312538
+    created: 1685210312538
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_4109b437a9d148eab2b81b2b71a67c2c
+    parentId: wrk_469e5af8d9f24963be08a2d7c482b814
+    modified: 1685210312526
+    created: 1685210312526
+    fileName: CCH2
+    contents: ""
+    contentType: yaml
+    _type: api_spec
