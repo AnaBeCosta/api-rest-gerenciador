@@ -14,7 +14,7 @@ route.post("/cadastrarPessoa", controllerPessoa.postCadastrarPessoa);
 
 route.put("/editarPessoa", controllerPessoa.putEditarPessoa);
 
-route.delete('/pessoa/:_id', controllerPessoa.deletePessoa);
+route.delete("/pessoa/:_id", controllerPessoa.deletePessoa);
 
 route.get("/candidatos", controllerPessoa.getCandidatos);
 
@@ -23,16 +23,16 @@ route.post("/cadastrarProjeto", controllerProjeto.postCadastrarProjeto);
 
 route.put("/editarProjeto", controllerProjeto.putEditarProjeto);
 
-route.delete("/projeto/:nome", controllerProjeto.deleteProjeto);
+route.delete("/projeto/:_id", controllerProjeto.deleteProjeto);
 
 route.get("/projetos", controllerProjeto.getProjetos);
 
-
+//CANDIDATOS E USUARIO
 route.get("/cadidatosInteressados", controllerProjeto.getCandidatosInteressados);
 
-route.get("/selecionados/:nome", controllerProjeto.getCandidatosSelecionados);
+route.post('/candidatar', controllerProjeto.postCandidatar);
 
-route.put('/selecionarCandidato', controllerProjeto.putSelecionarCandidato);
+route.get("/selecionados", controllerProjeto.getCandidatosSelecionados);
 
-route.put('/candidatar', controllerProjeto.putCandidatar);
+route.post('/selecionarCandidato', controllerProjeto.postSelecionarCandidato);
 

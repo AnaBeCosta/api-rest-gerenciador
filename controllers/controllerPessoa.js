@@ -110,12 +110,16 @@ module.exports = {
     try{
       if(validaAdmin){
         let candidatos = await Pessoa.find();
-        return res.json({ "data":{"status":"success", candidatos}});
+        return res.json({ data:{status:"success", candidatos}});
       }else{
         res.status(500).json({ error: 'Você não tem permissão! Somente administradores.'});
       }
     } catch (error) {
+      console.error(error);
       res.status(500).json({ error: 'Erro ao listar pessoas.' });
     }
-  }
+  }, 
+
+  verificaToken,
+  secretKey
 }
