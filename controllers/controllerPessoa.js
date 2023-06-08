@@ -38,7 +38,7 @@ module.exports = {
       console.log(user);
       
       if(user !== null){
-        const token = jwt.sign({userId: req.body.user}, secretKey, {expiresIn: 600});
+        const token = jwt.sign({userId: req.body.user}, secretKey, {expiresIn: 3600});
         return res.json({auth: true, token});
       }else{
         res.status(401).end();

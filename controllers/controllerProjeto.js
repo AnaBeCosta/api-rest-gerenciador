@@ -123,7 +123,7 @@ module.exports = {
     const {_id} = req.body;
 
     try {
-      const projetos = await Projeto.findOne({_id: _id});
+      const projeto = await Projeto.findOne({_id: _id});
       const selecionados = projeto.selecionados;
       return res.json({ data: { status: "success", selecionados } });
     } catch (error) {
