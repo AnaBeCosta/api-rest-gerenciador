@@ -40,8 +40,11 @@ A API armazena informações sobre projetos, incluindo Nome, Descrição do Proj
 11. **POST selecionaCandidato:** O Responsável pode selecionar um interessado para atuar no seu projeto.
 12. **GET candidatosSelecionados:** Qualquer usuário pode listar os candidatos selecionados para um determinado projeto.
 
-### 👩‍💻 Desenvolvido por 
+### 🚀 Desenvolvimento
+
+Este projeto foi desenvolvido na disciplina de Programação para Web 2 e abrangeu os conhecimentos relacionados ao desenvolvimento de sistemas web. Foram interpretados os requisitos e apresentadas soluções criativas para o sistema. 
+
+#### 👩‍💻 Colaboradoras
 - Ana Beatriz Faria  | ✉️ anacost.a@outlook.com
 - Julia Stahl
-
 
