@@ -42,7 +42,7 @@ A API armazena informações sobre projetos, incluindo Nome, Descrição do Proj
 
 ### 🚀 Desenvolvimento
 
-Este projeto foi desenvolvido na disciplina de Programação para Web 2 e abrangeu os conhecimentos relacionados ao desenvolvimento de sistemas web. Foram interpretados os requisitos e apresentadas soluções criativas para o sistema. 
+Este projeto foi desenvolvido na disciplina de Programação para Web 2.
 
 #### 👩‍💻 Colaboradoras
 - Ana Beatriz Faria  | ✉️ anacost.a@outlook.com
